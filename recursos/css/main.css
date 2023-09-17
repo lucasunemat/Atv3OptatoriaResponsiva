@@ -227,8 +227,6 @@
 .principal-menu-mobile-div ul li a {
     text-decoration: none;
     color: rgb(0, 0, 0);
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -237,14 +235,10 @@
         padding: 0;
     }
 
-    .icone-menu-mobile {
-        display: flex;
-    }
-
     .container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 20vh 170vh 75vh;
+        grid-template-rows: 20vh 170vh 80vh;
         grid-template-areas:
             'cabecalho'
             'principal'
@@ -257,11 +251,10 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-
     }
 
     .cabecalho h1 {
-        display: none;
+        font-size: 1.8rem;
     }
 
     .principal {
@@ -276,15 +269,16 @@
             'cta';
     }
 
-    .principal-menu .principal-menu-div {
+    .principal-menu .principal-menu-div{
         display: none;
     }
 
-    .principal-menu-mobile-div {
+    .principal-menu-mobile-div{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
         align-items: center;
+        justify-content: center;
+        grid-area: nav-menu;
     }
 
     .principal-quem-somos {
@@ -292,6 +286,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        grid-area: quem-somos;
     }
 
     .principal-quem-somos .principal-quem-somos-div {
@@ -310,21 +305,26 @@
         display: none;
     }
 
-    .principal-servicos{
+    .principal-servicos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-area: servicos;
+    }
+
+    .principal-servicos-div {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    .principal-servicos-div{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .principal-cta{
+        grid-area: cta;
     }
 
-    .principal-cta i{
+    .principal-cta i {
         display: none;
     }
 
@@ -336,23 +336,20 @@
     }
 
     .rodape {
-        margin: 0;
-        padding: 0;
         grid-area: rodape;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }    
-    .rodape .rodape-info-adicional{
+        gap: 2rem;
+    }
+
+    .rodape .rodape-info-adicional {
         display: flex;
-        margin-top: -5rem;
-        margin-bottom: 5rem;
     }
 
     .rodape .rodape-info-redes-sociais {
         display: flex;
-        flex-direction: column;
-        margin-bottom: 3rem;
-    }	
+    }
+
 }
