@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Montserrat:wght@300;400&family=Righteous&family=Roboto:ital,wght@0,400;1,100&family=Sarala&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 20vh 120vh 30vh;
+    grid-template-areas:
+        "cabecalho cabecalho cabecalho cabecalho"
+        "principal principal principal principal"
+        "rodape rodape rodape rodape";
+}
+
+.cabecalho {
+    background-color: aquamarine;
+    grid-area: cabecalho;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cabecalho button {
+    width: 120px;
+    height: 40px;
+    background-color: #00ff00be;
+    font-weight: 700;
+    color: #FFF;
+}
+
+.cabecalho h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.principal {
+    background-color: aliceblue;
+    grid-area: principal;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10vh 60vh 50vh;
+    grid-template-areas:
+        "nav-menu nav-menu nav-menu nav-menu"
+        "quem-somos quem-somos quem-somos quem-somos"
+        "servicos servicos servicos cta"
+    ;
+}
+
+.principal-menu {
+    background-color: blueviolet;
+    grid-area: nav-menu;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.principal-menu .principal-menu-div {
+    display: flex;
+}
+
+.principal-menu .principal-menu-div ul {
+    display: flex;
+    align-items: center;
+}
+
+.principal-menu .principal-menu-div ul li {
+    list-style: none;
+    margin: 0rem 12rem 0px 12rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: aquamarine;
+}
+
+.principal-menu .principal-menu-div ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+}
+
+.principal-quem-somos {
+    background-color: royalblue;
+    grid-area: quem-somos;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+}
+
+.principal-quem-somos .principal-quem-somos-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.principal-quem-somos .principal-quem-somos-div h2 {
+    align-self: center;
+    margin-bottom: 2rem;
+}
+
+.principal-quem-somos .principal-quem-somos-div p {
+    align-self: center;
+    margin-bottom: 2rem;
+    text-align: justify;
+    width: 40rem;
+}
+
+.principal-quem-somos img {
+    width: 35rem;
+    height: 20rem;
+    border-radius: 1rem;
+}
+
+.principal-servicos {
+    background-color: rgb(123, 207, 123);
+    grid-area: servicos;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.principal-servicos-div {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.principal-servicos h2 {
+    align-self: center;
+    margin-bottom: 2rem;
+}
+
+.principal-servicos-div p {
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+.principal-cta {
+    background-color: azure;
+    grid-area: cta;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.principal-cta-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    text-align: center;
+}
+
+.principal-cta-div button {
+    width: 200px;
+    height: 40px;
+    background-color: #00ff00be;
+    font-weight: 700;
+    font-size: 1vw;
+    color: #FFF;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.rodape {
+    background-color: blueviolet;
+    grid-area: rodape;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rodape .rodape-info-adicional {
+    display: flex;
+}
+
+.rodape .rodape-info-redes-sociais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rodape .rodape-info-redes-sociais p {
+    margin-top: 1rem;
+    margin-bottom: -0.2rem;
+}
+
+.rodape .rodape-info-redes-sociais div {
+    display: flex;
+    align-items: center;
+}
+
+.rodape .linkedin {
+    width: 2rem;
+}
+
+.rodape .instagram {
+    width: 4.4rem;
+}
+
+.icone-menu-mobile {
+    display: none;
+}
+
+.icone-menu-mobile button {
+    background-color: transparent;
+    border: none;
+}
+
+.principal-menu-mobile-div {
+    display: none;
+}
+
+.principal-menu-mobile-div ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 3rem;
+}
+
+.principal-menu-mobile-div ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .icone-menu-mobile {
+        display: flex;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20vh 170vh 75vh;
+        grid-template-areas:
+            'cabecalho'
+            'principal'
+            'rodape';
+        ;
+    }
+
+    .cabecalho {
+        grid-area: cabecalho;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    .cabecalho h1 {
+        display: none;
+    }
+
+    .principal {
+        grid-area: principal;
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 30vh 40vh 70vh 30vh;
+        grid-template-areas:
+            'nav-menu'
+            'quem-somos'
+            'servicos'
+            'cta';
+    }
+
+    .principal-menu .principal-menu-div {
+        display: none;
+    }
+
+    .principal-menu-mobile-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .principal-quem-somos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .principal-quem-somos .principal-quem-somos-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .principal-quem-somos .principal-quem-somos-div p {
+        width: 100%;
+    }
+
+    .principal-quem-somos img {
+        display: none;
+    }
+
+    .principal-servicos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .principal-servicos-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .principal-cta i{
+        display: none;
+    }
+
+    .principal-cta .principal-cta-div button {
+        width: 11em;
+        height: 3em;
+        border-radius: 1rem;
+        font-size: 1rem;
+    }
+
+    .rodape {
+        margin: 0;
+        padding: 0;
+        grid-area: rodape;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }    
+    .rodape .rodape-info-adicional{
+        display: flex;
+        margin-top: -5rem;
+        margin-bottom: 5rem;
+    }
+
+    .rodape .rodape-info-redes-sociais {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }	
+}
