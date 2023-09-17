@@ -14,14 +14,15 @@
         "cabecalho cabecalho cabecalho cabecalho"
         "principal principal principal principal"
         "rodape rodape rodape rodape";
+    background-color: #333;
 }
 
 .cabecalho {
-    background-color: aquamarine;
     grid-area: cabecalho;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-bottom: 1px solid #FFF2E7;
 }
 
 .cabecalho button {
@@ -29,17 +30,21 @@
     height: 40px;
     background-color: #00ff00be;
     font-weight: 700;
-    color: #FFF;
+    color: #FFF2E7;
+}
+
+.container button:hover {
+    background-color: #7bf47b;
+    color: #222;
 }
 
 .cabecalho h1 {
     font-family: 'Righteous', cursive;
     font-size: 2.5rem;
-    color: rgb(0, 0, 0);
+    color: #BD93F9;
 }
 
 .principal {
-    background-color: aliceblue;
     grid-area: principal;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -52,7 +57,6 @@
 }
 
 .principal-menu {
-    background-color: blueviolet;
     grid-area: nav-menu;
     display: flex;
     justify-content: space-around;
@@ -61,35 +65,43 @@
 
 .principal-menu .principal-menu-div {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .principal-menu .principal-menu-div ul {
+    margin-left: 2rem;
     display: flex;
     align-items: center;
+    justify-items: space-around;
 }
 
 .principal-menu .principal-menu-div ul li {
+    margin: 0 10rem 0 10rem;
     list-style: none;
-    margin: 0rem 12rem 0px 12rem;
-    padding: 1rem;
-    border-radius: 1rem;
-    background-color: aquamarine;
 }
 
 .principal-menu .principal-menu-div ul li a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: #FFF2E7;
+    font-size: 1.3rem;
+    font-weight: 700;
     font-family: 'Roboto', sans-serif;
 }
 
+.principal-menu .principal-menu-div ul li a:hover {
+    color: #BD93F9;
+    text-decoration: underline;
+}
+
 .principal-quem-somos {
-    background-color: royalblue;
     grid-area: quem-somos;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
     padding: 2rem;
+    border-bottom: 1px solid #FFF2E7;
 }
 
 .principal-quem-somos .principal-quem-somos-div {
@@ -100,6 +112,7 @@
 .principal-quem-somos .principal-quem-somos-div h2 {
     align-self: center;
     margin-bottom: 2rem;
+    color: #BD93F9;
 }
 
 .principal-quem-somos .principal-quem-somos-div p {
@@ -107,6 +120,7 @@
     margin-bottom: 2rem;
     text-align: justify;
     width: 40rem;
+    color: #FFF2E7;
 }
 
 .principal-quem-somos img {
@@ -116,12 +130,12 @@
 }
 
 .principal-servicos {
-    background-color: rgb(123, 207, 123);
     grid-area: servicos;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: #FFF2E7;
 }
 
 .principal-servicos-div {
@@ -132,6 +146,7 @@
 .principal-servicos h2 {
     align-self: center;
     margin-bottom: 2rem;
+    color: #BD93F9;
 }
 
 .principal-servicos-div p {
@@ -139,12 +154,10 @@
 }
 
 .principal-cta {
-    background-color: azure;
     grid-area: cta;
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 
 .principal-cta-div {
@@ -153,6 +166,13 @@
     align-items: center;
     gap: 32px;
     text-align: center;
+    padding: 1rem;
+    border-left: 1px solid #FFF2E7;
+    color: #FFF2E7;
+}
+
+.principal-cta-div h2 {
+    color: #BD93F9;
 }
 
 .principal-cta-div button {
@@ -161,17 +181,23 @@
     background-color: #00ff00be;
     font-weight: 700;
     font-size: 1vw;
-    color: #FFF;
+    color: #FFF2E7;
     border: none;
     font-family: 'Roboto', sans-serif;
 }
 
+.principal-cta-div button:hover {
+    background-color: #7bf47b;
+    color: #222;
+}
+
 .rodape {
-    background-color: blueviolet;
     grid-area: rodape;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-top: 1px solid rgb(255, 255, 255);
+    color: #FFF2E7;
 }
 
 .rodape .rodape-info-adicional {
@@ -202,6 +228,8 @@
     width: 4.4rem;
 }
 
+/*modificações para mobile*/
+
 .icone-menu-mobile {
     display: none;
 }
@@ -211,17 +239,18 @@
     border: none;
 }
 
-.principal-menu-mobile-div {
-    display: none;
-}
 
 .principal-menu-mobile-div ul {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
     list-style: none;
-    gap: 3rem;
+}
+
+.principal-menu-mobile-div {
+    display: none;
 }
 
 .principal-menu-mobile-div ul li a {
@@ -237,8 +266,8 @@
 
     .container {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 20vh 170vh 80vh;
+        grid-template-columns: 100dvw;
+        grid-template-rows: 20vh 132vh 74vh;
         grid-template-areas:
             'cabecalho'
             'principal'
@@ -261,7 +290,7 @@
         grid-area: principal;
         display: grid;
         grid-template-columns: 100vw;
-        grid-template-rows: 30vh 40vh 70vh 30vh;
+        grid-template-rows: 17vh 40vh 45vh 30vh;
         grid-template-areas:
             'nav-menu'
             'quem-somos'
@@ -269,16 +298,31 @@
             'cta';
     }
 
-    .principal-menu .principal-menu-div{
+    .principal-menu .principal-menu-div {
         display: none;
     }
 
-    .principal-menu-mobile-div{
+    .principal-menu-mobile-div {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         grid-area: nav-menu;
+    }
+
+    .principal-menu-mobile-div ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        margin-top: 2.5rem;
+        list-style: none;
+    }
+
+    .principal-menu-mobile-div ul li a {
+        color: #FFF2E7;
+        font-weight: 700;
     }
 
     .principal-quem-somos {
@@ -287,6 +331,7 @@
         align-items: center;
         justify-content: center;
         grid-area: quem-somos;
+        border-bottom: none;
     }
 
     .principal-quem-somos .principal-quem-somos-div {
@@ -295,6 +340,9 @@
         align-items: center;
         justify-content: center;
         width: 100%;
+        border-top: 1px solid #FFF2E7;
+        border-bottom: 1px solid #FFF2E7;
+        padding-top: 1rem;
     }
 
     .principal-quem-somos .principal-quem-somos-div p {
@@ -318,10 +366,18 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        border-bottom: 1px solid #FFF2E7;
     }
 
-    .principal-cta{
+    .principal-cta {
         grid-area: cta;
+        display: flex;
+        flex-direction: column ;
+    }
+
+    .principal-cta-div {
+        margin-top: 4rem;
+        border-left: none;
     }
 
     .principal-cta i {
